@@ -1,0 +1,29 @@
+{
+  "name": "arb-tax-decay",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Prices the staleness of a pool: the longer a pool goes untraded, the more the next swap pays.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nirholas/arb-tax-decay.git"
+  },
+  "homepage": "https://arb-tax-decay.pages.dev",
+  "keywords": [
+    "uniswap",
+    "uniswap-v4",
+    "uniswap-hooks",
+    "defi",
+    "amm",
+    "solidity",
+    "mev",
+    "lvr",
+    "dynamic-fee",
+    "oracle-free"
+  ],
+  "scripts": {
+    "build": "node web/build.mjs",
+    "contracts:build": "forge build",
+    "contracts:test": "forge test"
+  }
+}
