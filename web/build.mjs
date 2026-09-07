@@ -5,7 +5,7 @@
  * Everything on the page comes from `hook.json`, which is generated from the contract, so the page cannot describe
  * the hook as something it is not. No dependencies: run `node web/build.mjs` and publish `web/dist`.
  */
-import {cpSync, mkdirSync, readFileSync, writeFileSync} from "node:fs";
+import {cpSync, existsSync, mkdirSync, readFileSync, writeFileSync} from "node:fs";
 import {dirname, join} from "node:path";
 import {fileURLToPath} from "node:url";
 
@@ -23,6 +23,7 @@ mkdirSync(join(DIST, "assets"), {recursive: true});
 writeFileSync(join(DIST, "index.html"), page);
 cpSync(join(HERE, "src", "site.css"), join(DIST, "assets", "site.css"));
 cpSync(join(HERE, "src", "scene.js"), join(DIST, "assets", "scene.js"));
+if (existsSync(join(HERE, "src", "demo.js"))) cpSync(join(HERE, "src", "demo.js"), join(DIST, "assets", "demo.js"));
 cpSync(join(HERE, "src", "og.png"), join(DIST, "og.png"));
 cpSync(join(HERE, "..", "hook.json"), join(DIST, "hook.json"));
 
