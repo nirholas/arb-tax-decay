@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: If you use this software, please cite it as below.
+title: "arb-tax-decay"
+abstract: "Prices the staleness of a pool: the longer a pool goes untraded, the more the next swap pays."
+license: Apache-2.0
+repository-code: "https://github.com/nirholas/arb-tax-decay"
+url: "https://three.ws"
+authors:
+  - name: three.ws
+    website: "https://three.ws"
